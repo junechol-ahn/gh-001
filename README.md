@@ -1,5 +1,5 @@
 # github actions course
 
-upgrade your ***github skills***
+upgrade your **github skills**
 
 
