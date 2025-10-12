@@ -4,7 +4,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: '20 15 * * *'
+    - cron: '*/5 15 * * *'
   workflow_dispatch:
   
 
@@ -15,5 +15,5 @@ jobs:
       - name: Show the trigger
         run: |
           echo ${{github.event_name}}
-          echo ${{github.event}}
+          echo ${date}
       
