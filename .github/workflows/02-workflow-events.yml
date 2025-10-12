@@ -14,6 +14,6 @@ jobs:
     steps:
       - name: Show the trigger
         run: |
-          echo ${{github.event_name}}
+          echo this is triggered by ${{github.event_name}}
           echo $(date)
       
