@@ -1,3 +1,5 @@
-# gh-001
+# github actions course
 
-hey, does anybody know how to trigger scheduled workflow?
+upgrade your **github skills**
+
+
