@@ -9,9 +9,9 @@ on:
         default: false
 
 env: 
-  DEBUG: ${{ inputs.debug }} && "ON" || "OFF"
+  MY_DEBUG: ${{ inputs.debug }} && "ON" || "OFF"
   
-run-name: ${{ github.workflow }} | DEBUG - ${{ env.DEBUG }}
+run-name: ${{ github.workflow }} | DEBUG - ${{ env.MY_DEBUG }}
 
 jobs:
   echo:
