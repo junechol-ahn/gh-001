@@ -1,6 +1,11 @@
 name: 06 - Contexts
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      debug:
+        type: boolean
+        default: false
 
 run-name: 06 - Contexts | DEBUG - ${{ inputs.debug }}
 
