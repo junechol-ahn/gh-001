@@ -11,7 +11,7 @@ on:
 # env: 
 #   MY_DEBUG: ${{ inputs.debug }} && "ON" || "OFF"
   
-run-name: ${{ github.workflow }} | DEBUG - 
+run-name: ${{ github.workflow }} | DEBUG - ${{ inputs.debug }}
 # ${{ env.MY_DEBUG }}
 
 jobs:
