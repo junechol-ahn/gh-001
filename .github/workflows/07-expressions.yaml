@@ -1,18 +1,13 @@
 name: 07 - Using Expressions
 
 on: 
-  push:
   workflow_dispatch:
     inputs:
       debug:
         type: boolean
         default: false
-
-# env: 
-#   MY_DEBUG: ${{ inputs.debug }} && "ON" || "OFF"
   
 run-name: ${{ github.workflow }} | DEBUG - ${{ inputs.debug == true && 'ON' || 'OFF' }}
-# ${{ env.MY_DEBUG }}
 
 jobs:
   echo:
