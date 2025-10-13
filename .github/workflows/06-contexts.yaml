@@ -1,8 +1,8 @@
 name: 06 - Contexts
 
-on: [push, workflow_dispatch]
+on: workflow_dispatch
 
-run-name: My custom workflow run name - ${{ github.actor_id }}
+run-name: 06 - Contexts | DEBUG - ${{ inputs.debug }}
 
 jobs:
   echo-data:
