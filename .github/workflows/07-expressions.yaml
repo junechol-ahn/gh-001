@@ -8,10 +8,10 @@ on:
         type: boolean
         default: false
 
-env: 
-  MY_DEBUG: ${{ inputs.debug }} && "ON" || "OFF"
+# env: 
+#   MY_DEBUG: ${{ inputs.debug }} && "ON" || "OFF"
   
-run-name: ${{ github.workflow }} | DEBUG - ${{ env.MY_DEBUG }}
+# run-name: ${{ github.workflow }} | DEBUG - ${{ env.MY_DEBUG }}
 
 jobs:
   echo:
