@@ -2,11 +2,12 @@ name: 15 - Working with Matrices
 on: workflow_dispatch
 jobs:
   backwards-compatibility:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
         node-version: [20.x, 21.x, 22.x]
+    name: ${{ matrix.os }} - ${{ matrix.node-version }}
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Setup node
         uses: actions/setup-node@v4
