@@ -8,7 +8,7 @@ inputs:
   working-dir:
     required: false
     description: The working directory of the application
-    default: ${{ github.workspace }}
+    default: .
 runs:
   using: composite
   steps:
@@ -20,7 +20,7 @@ runs:
       id: cache
       uses: actions/cache@v4
       with:
-        path: ${{inputs.working-dir}}
+        path: ${{inputs.working-dir}}/node_modules
         key: your-key-prefix-${{ hashFiles(format('{0}/{1}', inputs.working-dir, 'package-lock.json')) }}
     - name: Install dependencies
       shell: bash
