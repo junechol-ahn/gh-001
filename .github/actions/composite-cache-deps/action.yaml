@@ -26,3 +26,4 @@ runs:
       shell: bash
       if: ${{ ! steps.cache.outputs.cache-hit }}
       run : npm ci
+      working-directory: ${{ inputs.working-dir }}
