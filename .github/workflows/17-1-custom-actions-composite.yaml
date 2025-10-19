@@ -7,15 +7,15 @@ on:
         type: choice
         options: [dev, prod]
 run-name: 17 - 1 - Custom Actions - Composite | env - ${{ inputs.target-env }}
-env:
-  working-directory: react-app
+# env:
+#   working-directory: react-app
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: ${{ env.working-directory }}
+    defaults:
+      run:
+        working-directory: ./react-app
     steps:
       - run: actions/checkout@v4
 
@@ -23,13 +23,10 @@ jobs:
         uses: ./.github/actions/composite-cache-deps
         with:
           node-version: 24.x
-          working-directory: ${{ env.working-directory }}
 
       - name: Test
         run: npm run test
-        working-directory: ${{ env.working-directory }}
 
       - name: Build
         run: npm run build
-        working-directory: ${{ env.working-directory }}
       
