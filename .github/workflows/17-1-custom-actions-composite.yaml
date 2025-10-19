@@ -8,7 +8,7 @@ on:
         options: [dev, prod]
 run-name: 17 - 1 - Custom Actions - Composite | env - ${{ inputs.target-env }}
 env:
-  working-directory: react-app
+  working-directory: .
 
 jobs:
   build:
