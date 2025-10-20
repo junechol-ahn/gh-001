@@ -8,7 +8,7 @@ async function run() {
   const isDebug = getBooleanInput('debug');
 
 
-  info(baseBranch, targetBranch, workingDirectory, githubToken, isDebug);
+  info(`${baseBranch}, ${targetBranch}, ${workingDirectory}, ${githubToken}, ${isDebug}`);
 }
 
 run();
