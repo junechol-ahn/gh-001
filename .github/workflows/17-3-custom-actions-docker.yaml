@@ -15,5 +15,5 @@ jobs:
       - name: Ping URL
         uses: ./.github/actions/docker-ping-url
         with:
-          url: "www.naver.com"
+          url: ${{ inputs.url }}
         
