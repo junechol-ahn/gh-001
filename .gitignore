@@ -1,5 +1,8 @@
 # Dependency directories
 node_modules/
+# include js actions node_modules
+!.github/actions/**/node_modules/
+
 
 # Build output
 build/
