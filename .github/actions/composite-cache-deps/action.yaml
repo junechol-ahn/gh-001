@@ -9,6 +9,10 @@ inputs:
     required: false
     description: The working directory of the application
     default: .
+outputs:
+  installed-deps:
+    description: Whether the dependencies were installed (true/false)
+    value: ${{ steps.cache.outputs.cache-hit == 'false' }}
 runs:
   using: composite
   steps:
