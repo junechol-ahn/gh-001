@@ -19,22 +19,9 @@ inputs:
     description: Whether the output debug messages to the console
     required: false
     default: 'false'
-  # github-token:
-  #   description: 'GitHub Token to create PRs'
-  #   required: true
-  #   default: '${{ github.token }}'
-  # pr-branch:
-  #   description: 'The name of the branch for the PR'
-  #   required: false
-  #   default: 'dependency-update'
-  # pr-title:
-  #   description: 'The title of the PR'
-  #   required: false
-  #   default: 'Update NPM Dependencies'
-  # pr-body:
-  #   description: 'The body of the PR'
-  #   required: false
-  #   default: 'This PR updates the NPM dependencies to their latest versions.'
+outuputs:
+  updates-available:
+    description: Whether there were dependency updates available
 runs:
   using: node20
   main: ./index.js

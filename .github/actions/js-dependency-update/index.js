@@ -48,6 +48,7 @@ async function run() {
 
   if (gitStatus.stdout === '') {
     core.info('[js-dependency-update] : No dependency updates found.');
+    core.setOutput('updates-available', 'false');
     return;
   }
 
@@ -77,6 +78,7 @@ async function run() {
 
 
   core.info(`git status:\n${gitStatus.stdout}`);
+  core.setOutput('updates-available', 'true');
 }
 
 run();
