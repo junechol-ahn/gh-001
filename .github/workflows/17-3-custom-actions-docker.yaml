@@ -3,9 +3,20 @@ on:
   workflow_dispatch:
     inputs:
       url: 
-        type: string
+        type: choice
+        options:
+          - "https://www.google.com"
+          - "https://www.githubnoaccess.com"
         description: url to fetch
         default: "https://www.google.com"
+      max_trials:
+        description: Maximum number of fetch attempts
+        required: false
+        default: '10'
+      delay:
+        description: Delay between fetch attempts (in seconds)
+        required: false
+        default: '5'
 jobs:
   ping-url:
     runs-on: ubuntu-latest
@@ -16,4 +27,6 @@ jobs:
         uses: ./.github/actions/docker-ping-url
         with:
           url: ${{ inputs.url }}
+          max-trials: ${{ inputs.max_trials }}
+          delay: ${{ inputs.delay }}
         
