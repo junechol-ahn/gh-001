@@ -24,9 +24,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Ping URL
+        id: ping-url
         uses: ./.github/actions/docker-ping-url
         with:
           url: ${{ inputs.url }}
           max-trials: ${{ inputs.max_trials }}
           delay: ${{ inputs.delay }}
-        
+      
+      - name: Print whether URL was reachable
+        run: |
+          echo "URL reachable: ${{ steps.ping-url.outputs.url-reachable }}"
