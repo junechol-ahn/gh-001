@@ -1,0 +1,9 @@
+name: Safe Title Check
+description: Checks if the PR title starts with "feat" and fails if it does not.
+inputs:
+  pr-title:
+    description: The title of the pull request to check
+    required: true
+runs:
+  using: "node20"
+  main: "./index.js"
